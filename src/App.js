@@ -12,11 +12,11 @@ class App extends Component {
   };
 
   componentDidMount() {
-    this.createCard();
+    this.createCards();
   }
 
-  createCard = id => {
-    const cards = this.statecards;
+  createCards = id => {
+    const cards = this.state.cards;
     this.setState({ cards });
   };
 
@@ -38,12 +38,13 @@ class App extends Component {
           </div>
         </div>
         <div className="row">
-          {this.state.cards.map(card => (
+          {this.state.cards.map(cards => (
             <Card
               // removeCard={this.removeCard}
-              id={card.id}
-              key={card.id}
-              image={card.image}
+              location={cards.location}
+              occupation={cards.occupation}
+              name={cards.name}
+              image={cards.image}
             />
           ))}
         </div>
