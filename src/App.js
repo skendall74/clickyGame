@@ -18,11 +18,12 @@ class App extends Component {
   // Setting this.state.friends to the friends json array
   state = {
     count: 0,
-    score: "",
-    selectedCards: []
+    score: 0,
+    selectedCards: [],
   };
 
   selectedImage = id => {
+    console.log('clik')
     let selectedCards = this.state.selectedCards;
     // eslint-disable-next-line default-case
     switch (selectedCards.indexOf(id) === -1) {
@@ -56,7 +57,9 @@ class App extends Component {
   // handleIncrement increases this.state.count by 1
   handleIncrement = () => {
     // We always use the setState method to update a component's state
-    this.setState({ score: this.state.score + 1 });
+    this.setState({ score: this.state.score + 1 }, () => {
+      console.log(this.state.score)
+    });
   };
 
   // shuffle up images
@@ -82,15 +85,16 @@ class App extends Component {
           </div>
         </div>
         <div className="row">
-          {this.state.cards.map(card => (
+          {cards.map(cards => (
             <Card
               removeCard={this.removeCard}
-              id={card.id}
-              name={card.name}
-              image={card.image}
-              occupation={card.occupation}
-              location={card.location}
-              alt={card.alt}
+              key={cards.id}
+              id={cards.id}
+              name={cards.name}
+              image={cards.image}
+              occupation={cards.occupation}
+              location={cards.location}
+              alt={cards.alt}
               selectedImage={this.selectedImage}
             />
           ))}
