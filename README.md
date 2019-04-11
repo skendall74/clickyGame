@@ -59,5 +59,5 @@ Clicky-Game uses the following NPM packages:
 
 ## Author
 
-* **Erick Grissom** - *REACT* - [Clicky-Game Repo](https://github.com/skendall74/clickyGame/tree/master)
+* **Shannon Kendall** - *REACT* - [Clicky-Game Repo](https://github.com/skendall74/clickyGame/tree/master)
 
