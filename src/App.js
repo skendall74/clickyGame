@@ -23,34 +23,36 @@ class App extends Component {
   };
 
   selectedImage = id => {
-    console.log('clik')
     let selectedCards = this.state.selectedCards;
-    // eslint-disable-next-line default-case
-    switch (selectedCards.indexOf(id) === -1) {
-      case this.state.score === 11:
-        // push that id into that id into the array to be stored
-        selectedCards.push(id);
-        console.log(selectedCards);
-        // run the score function
-        this.handleIncrement();
-        // run the reshuffle function after each click
-        this.cardShuffle();
-        console.log("selected ONCE");
-        alert("You won!");
-        this.setState({
-          score: 0,
-          selectedCards: []
-        });
-        break;
+    let score = this.state.score;
+    let highScore = this.state.highScore;
+    // Set this.state.cards equal to the new cards array
+    // if the clicked image has an id of the indexed cards
+    if (selectedCards.indexOf(id) === -1) {
+      // push that id into that id into the array to be stored
+      selectedCards.push(id);
+      // run the score function
+      this.handleIncrement();
+      // run the reshuffle function after each click
+      this.cardShuffle();
+    } else if (this.state.score === 12) {
+      alert("You WON!");
+      this.setState({
+        score: 0,
+        selectedCards: []
+      });
+    } else {
+      this.setState({
+        score: 0,
+        selectedCards: []
+      });
+      alert("YOU LOST! You clicked an image twice!");
+    }
 
-      case this.setState():
-        console.log("selected TWICE");
-        alert("Sorry you LOST! You clicked an image twice!!");
-        this.setState({
-          score: 0,
-          selectedCards: []
-        });
-        break;
+    if (score > highScore) {
+      this.setState({
+        highScore: score
+      });
     }
   };
 
@@ -87,7 +89,6 @@ class App extends Component {
         <div className="row">
           {cards.map(cards => (
             <Card
-              removeCard={this.removeCard}
               key={cards.id}
               id={cards.id}
               name={cards.name}
