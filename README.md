@@ -1,6 +1,6 @@
 
 <p align="center">
-<a href="https://github.com/skendall74/clickyGame/tree/master" target="_blank"><img src="https://skendall74.github.io/clickyGame/documents/nick.png" alt="Project logo"/></a>
+<a href="https://skendall74.github.io/clickyGame/" target="_blank"><img src="https://raw.githubusercontent.com/skendall74/clickyGame/master/documents/nick.png" alt="Project logo"/></a>
 </p>
 
 # Clicky Game
@@ -30,7 +30,7 @@ To use Clicky-Game web application application from your local environment, you 
   <tr>
     <td align="center">01</td>
     <td>Clone this repo</td>
-    <td>git clone https://<i></i>github.com/GrissomErick/Clicky-Game.git</td>
+    <td>git clone https://<i></i>https://github.com/skendall74/clickyGame/tree/master</td>
   </tr>
   <tr>
     <td align="center">02</td>
