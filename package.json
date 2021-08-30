@@ -4,10 +4,10 @@
   "private": true,
   "homepage": "https://skendall74.github.io/clickyGame",
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-router-dom": "^5.0.0",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "2.1.8"
   },
   "scripts": {
@@ -26,5 +26,8 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "webpack-dev-server": "^4.0.0"
+  }
 }
