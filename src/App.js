@@ -3,7 +3,7 @@ import Card from "./components/Card";
 import Wrapper from "./components/Wrapper";
 import Title from "./components/Title";
 import cards from "./cards.json";
-
+ 
 // shuffle function from stackoverflow - https://stackoverflow.com/questions/6274339/how-can-i-shuffle-an-array
 function shuffle(array) {
   for (let i = array.length - 1; i > 0; i--) {
